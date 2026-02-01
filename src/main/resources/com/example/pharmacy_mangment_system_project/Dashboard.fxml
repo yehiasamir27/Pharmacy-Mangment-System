@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="737.0" prefWidth="1042.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharmacy_mangment_system_project.Dashboard">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="157.0" layoutY="-157.0" prefHeight="737.3333333333334" prefWidth="1042.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="737.0" prefWidth="264.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="206.0" fitWidth="245.0" layoutX="32.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/Medical-pharmacy-logo-design-template-on-transparent-background-PNG.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="Dashboard_btn" layoutX="32.0" layoutY="233.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="39.0" prefWidth="180.0" text="Dashboard">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="inserting_med_btn" layoutX="32.0" layoutY="298.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="39.0" prefWidth="180.0" text="Add medicine">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Buying_med_btn" layoutX="32.0" layoutY="369.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="39.0" prefWidth="180.0" text="Buy medicine">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="inserting_acc_btn" layoutX="32.0" layoutY="436.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="39.0" prefWidth="180.0" text="Add Accessories">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Buying_acc_btn" layoutX="32.0" layoutY="508.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="39.0" prefWidth="180.0" text="Buy Accessories">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Logout_btn" layoutX="32.0" layoutY="583.0" mnemonicParsing="false" onAction="#logout" prefHeight="39.0" prefWidth="180.0" text="Logout">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashboard_form" layoutX="59.0" layoutY="158.0" prefHeight="737.3333333333334" prefWidth="778.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="42.0" layoutY="156.0" prefHeight="404.0" prefWidth="699.0">
+                                 <children>
+                                    <AnchorPane layoutX="51.0" layoutY="87.0" prefHeight="200.0" prefWidth="251.0" style="-fx-background-color: #D1D0D0;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="158.0" text="Available Medicines">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="Available_med_label" layoutX="228.0" layoutY="14.0" prefHeight="27.0" prefWidth="11.0" text="0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="101.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../img/8TE6Kj9Gc.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <effect>
+                                          <ColorAdjust />
+                                       </effect></AnchorPane>
+                                    <AnchorPane layoutX="365.0" layoutY="87.0" prefHeight="200.0" prefWidth="245.0" style="-fx-background-color: #D1D0D0;">
+                                       <children>
+                                          <Label layoutX="8.0" layoutY="160.0" text="Total Income">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="total_income_label" layoutX="226.0" layoutY="14.0" text="\$0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="99.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../img/toppng.com-dollar-icon-926x980.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children></AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AddMedicines_form" layoutX="259.0" layoutY="269.0" prefHeight="737.3333333333334" prefWidth="778.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="3.0" layoutY="10.0" prefHeight="302.0" prefWidth="769.0">
+                                 <children>
+                                    <Label layoutX="28.0" layoutY="32.0" text="Medicine name">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="add_med_name" layoutX="169.0" layoutY="33.0" />
+                                    <Label layoutX="28.0" layoutY="85.0" text="Medicine ID">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="add_med_id" layoutX="169.0" layoutY="86.0" />
+                                    <Label layoutX="28.0" layoutY="137.0" prefHeight="27.0" prefWidth="132.0" text="Medicine Type">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="add_med_type" layoutX="169.0" layoutY="138.0" onAction="#addmedlist" prefWidth="150.0" promptText="Choose" />
+                                    <Button fx:id="add_med_btn" layoutX="21.0" layoutY="248.0" mnemonicParsing="false" onAction="#addmedicineADD" prefHeight="39.0" prefWidth="155.0" text="ADD">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="update_med_btn" layoutX="228.0" layoutY="248.0" mnemonicParsing="false" onAction="#updateMedicine" prefHeight="39.0" prefWidth="147.0" text="Update">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="clear_med_btn" layoutX="415.0" layoutY="248.0" mnemonicParsing="false" onAction="#addmedrest" prefHeight="39.0" prefWidth="145.0" text="Clear">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="remove_med_btn" layoutX="595.0" layoutY="248.0" mnemonicParsing="false" onAction="#deleteMedicine" prefHeight="39.0" prefWidth="152.0" text="Remove">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="365.0" layoutY="32.0" text="Medicine Price">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="add_med_Price" layoutX="508.0" layoutY="33.0" promptText="\$ 0.0" />
+                                    <Label layoutX="362.0" layoutY="85.0" text="Expiry Date">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="Add_med_date" layoutX="497.0" layoutY="86.0" />
+                                    <Label layoutX="357.0" layoutY="138.0" text="Medicine Instruction">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="add_med_Instuction" layoutX="539.0" layoutY="138.0" />
+                                    <Label layoutX="23.0" layoutY="192.0" prefHeight="27.0" prefWidth="132.0" text="Medicine status">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="add_med_status" layoutX="169.0" layoutY="192.0" onAction="#setAdd_med_status" prefWidth="150.0" promptText="Choose" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="8.0" layoutY="346.0" prefHeight="386.0" prefWidth="773.0">
+                                 <children>
+                                    <TextField fx:id="Add_med_search" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="166.0" promptText="Search" />
+                                    <TableView fx:id="Add_table_med" layoutX="14.0" layoutY="52.0" onMouseClicked="#addMedicineSelect" onSort="#addMedicineShowListData" prefHeight="329.0" prefWidth="758.0">
+                                      <columns>
+                                        <TableColumn fx:id="add_med_id_col" prefWidth="75.0" text="Med ID" />
+                                        <TableColumn fx:id="add_med_name_col" prefWidth="75.0" text="Med Name" />
+                                          <TableColumn fx:id="add_med_type_col" prefWidth="75.0" text="Med type" />
+                                          <TableColumn fx:id="add_med_date_col" prefWidth="75.0" text="Date" />
+                                          <TableColumn fx:id="add_med_price_col" prefWidth="75.0" text="Price" />
+                                          <TableColumn fx:id="add_med_instr_col1" prefWidth="125.3333740234375" text="Med Instruction" />
+                                          <TableColumn fx:id="add_med_statue_col" prefWidth="125.3333740234375" text="Med statue" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="BuyMedicines_form" layoutX="-4.0" prefHeight="737.0" prefWidth="791.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="2.0" layoutY="4.0" prefHeight="729.0" prefWidth="483.0">
+                                 <children>
+                                    <TableView fx:id="Purchase_table" layoutX="122.0" layoutY="62.0" prefHeight="729.3333333333334" prefWidth="542.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="Purchase_med_id_col" prefWidth="75.0" text="Med ID" />
+                                        <TableColumn fx:id="Purchase_med_name_col" prefWidth="75.0" text="Med Name" />
+                                          <TableColumn fx:id="Purchase_med_type_col" prefWidth="75.0" text="Type" />
+                                          <TableColumn fx:id="Purchase_med_qty_col" prefWidth="75.0" text="Qty" />
+                                          <TableColumn fx:id="Purchase_med_price_col" prefWidth="75.0" text="Price" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="485.0" layoutY="8.0" prefHeight="721.0" prefWidth="311.0">
+                                 <children>
+                                    <Label layoutX="58.0" layoutY="46.0" prefHeight="27.0" prefWidth="68.0" text="Type">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="Purchase_Med_type" layoutX="166.0" layoutY="46.0" onAction="#purshaeType" prefHeight="28.0" prefWidth="145.0" promptText="choose" />
+                                    <Label layoutX="29.0" layoutY="98.0" prefHeight="27.0" prefWidth="105.0" text="Meedicine Id">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="Purchase_Med_ID" layoutX="170.0" layoutY="98.0" onAction="#purshaemedid" onMouseClicked="#purshaemedid" prefHeight="28.0" prefWidth="141.0" promptText="choose" />
+                                    <Label layoutX="29.0" layoutY="148.0" prefHeight="27.0" prefWidth="139.0" text="Meedicine Name">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="Purchase_Med_Name" layoutX="169.0" layoutY="148.0" onAction="#setPurchase_Med_Name" prefHeight="28.0" prefWidth="142.0" promptText="choose" />
+                                    <Button fx:id="Purchase_add_btn" layoutX="178.0" layoutY="295.0" mnemonicParsing="false" onAction="#purchaseadd" prefHeight="31.0" prefWidth="121.0" text="Add to Cart" />
+                                    <Label layoutX="41.0" layoutY="367.0" prefHeight="27.0" prefWidth="68.0" text="Total:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Purchase_total" layoutX="104.0" layoutY="359.0" prefHeight="35.0" prefWidth="120.0" text="\$0.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="41.0" layoutY="417.0" prefHeight="27.0" prefWidth="68.0" text="Amount">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="Purchase_amount" layoutX="120.0" layoutY="418.0" onAction="#Purchasamount" promptText="\$0.0" />
+                                    <Label layoutX="41.0" layoutY="470.0" prefHeight="27.0" prefWidth="68.0" text="Balance">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Purchase_Balance" layoutX="120.0" layoutY="470.0" prefHeight="27.0" prefWidth="68.0" text="\$0.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="purchasePay_btn" layoutX="2.0" layoutY="596.0" mnemonicParsing="false" onAction="#purchasePay" prefHeight="43.0" prefWidth="298.0" text="Pay" />
+                                    <Spinner fx:id="Purchase_QTY" layoutX="165.0" layoutY="212.0" onMouseClicked="#purchasequantity" />
+                                    <Label layoutX="22.0" layoutY="211.0" prefHeight="27.0" prefWidth="139.0" text="QTY">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="Add_acc_form" layoutX="240.0" layoutY="195.0" prefHeight="737.3333333333334" prefWidth="790.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="3.0" layoutY="8.0" prefHeight="283.0" prefWidth="777.0">
+                                 <children>
+                                    <Label layoutX="24.0" layoutY="25.0" text="Accessory ID ">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="add_acc_id" layoutX="170.0" layoutY="26.0" />
+                                    <Label layoutX="24.0" layoutY="65.0" text="Accessory Name">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="add_acc_name" layoutX="170.0" layoutY="66.0" />
+                                    <Button fx:id="Purchase_add_btn1" layoutX="8.0" layoutY="225.0" mnemonicParsing="false" onAction="#ADDacc" prefHeight="31.0" prefWidth="121.0" text="ADD" />
+                                    <Button fx:id="Purchase_add_btn11" layoutX="155.0" layoutY="225.0" mnemonicParsing="false" onAction="#updateAccessory" prefHeight="31.0" prefWidth="121.0" text="Update" />
+                                    <Button fx:id="Purchase_add_btn111" layoutX="297.0" layoutY="225.0" mnemonicParsing="false" onAction="#addAccrest" prefHeight="31.0" prefWidth="121.0" text="Clear" />
+                                    <Button fx:id="Purchase_add_btn1111" layoutX="447.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteSelectedAccessory" prefHeight="31.0" prefWidth="121.0" text="Remove" />
+                                    <Label layoutX="24.0" layoutY="114.0" text="Accessory Price">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="add_acc_price" layoutX="170.0" layoutY="115.0" promptText="\$ 0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="14.0" layoutY="359.0" prefHeight="369.0" prefWidth="769.0">
+                                 <children>
+                                    <TextField fx:id="Add_acc_search" layoutX="12.0" layoutY="16.0" promptText="search" />
+                                    <TableView fx:id="Add_acc_table" layoutX="12.0" layoutY="58.0" onMouseClicked="#addACCSelect" onSort="#addacclist" prefHeight="247.0" prefWidth="755.0">
+                                      <columns>
+                                        <TableColumn fx:id="add_acc_id_col" prefWidth="122.66668701171875" text="Accessory ID" />
+                                        <TableColumn fx:id="add_acc_name_col" prefWidth="152.0" text="Accessory Name" />
+                                          <TableColumn fx:id="add_acc_price_col" prefWidth="152.0" text="Accessory price" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="Buy_acc_form" layoutX="268.0" layoutY="137.0" prefHeight="737.3333333333334" prefWidth="790.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="702.0" prefWidth="384.0">
+                                 <children>
+                                    <TableView fx:id="Purchase_acc_table" prefHeight="702.0" prefWidth="384.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="Purchase_acc_id_col" prefWidth="110.666748046875" text="Accessory Id" />
+                                        <TableColumn fx:id="Purchase_acc_name_col" prefWidth="111.33331298828125" text="Accessory Name" />
+                                          <TableColumn fx:id="Purchase_acc_qty_col" prefWidth="43.99993896484375" text="Qty" />
+                                          <TableColumn fx:id="Purchase_acc_price_col" prefWidth="43.99993896484375" text="Price" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="447.0" layoutY="14.0" prefHeight="707.0" prefWidth="335.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="45.0" prefHeight="27.0" prefWidth="120.0" text="Accessory Id">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="Purchase_acc_id" layoutX="171.0" layoutY="46.0" prefWidth="150.0" promptText="choose" />
+                                    <Label layoutX="14.0" layoutY="98.0" prefHeight="27.0" prefWidth="143.0" text="Accessory Name">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="Purchase_acc_name" layoutX="171.0" layoutY="98.0" prefWidth="150.0" promptText="choose" />
+                                    <Button fx:id="acc_add_btn" layoutX="172.0" layoutY="167.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="151.0" text="Add to Chart" />
+                                    <Label layoutX="17.0" layoutY="321.0" prefHeight="27.0" prefWidth="68.0" text="Total:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Purchase_total_acc" layoutX="86.0" layoutY="321.0" prefHeight="27.0" prefWidth="68.0" text="\$0.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="17.0" layoutY="382.0" prefHeight="27.0" prefWidth="68.0" text="Amount">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="Purchase_amount_acc" layoutX="96.0" layoutY="382.0" promptText="\$0.0" />
+                                    <Label layoutX="18.0" layoutY="467.0" prefHeight="27.0" prefWidth="68.0" text="Balance">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Purchase_Balance_acc" layoutX="96.0" layoutY="467.0" prefHeight="27.0" prefWidth="68.0" text="\$0.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="acc_pay_btn" layoutX="179.0" layoutY="573.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" text="Pay" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center></BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
