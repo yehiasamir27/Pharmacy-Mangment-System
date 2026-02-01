@@ -21,7 +21,4 @@ It helps solve the common problem of **manual, error-prone tracking** by organiz
 - Build: mvn clean package
 - Run from IDE (recommended) or configure a Main class in Maven if needed.
 
-## Notes
-- This is a local desktop project for learning/practice.
-- If the project requires a database, import/configure it based on the connection settings inside the source code.
 
